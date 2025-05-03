@@ -1,16 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko-KR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avatars 과제</title>
-  <link rel="shortcut icon" href="/src/assets/favicon/likelion.ico" type="image/x-icon" />
-  <link rel="icon" href="/src/assets/favicon/likelion.svg" />
-  <link rel="preload" as="font" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css">
-  <link rel="stylesheet" href="./styles/avatars.css" />
-</head>
-<body>
-  <!-- 여기에 마크업을 구성해 주세요. -->
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avatars 과제</title>
+    <!-- <link rel="shortcut icon" href="/src/assets/favicon/likelion.ico" type="image/x-icon" /> -->
+    <!-- <link rel="icon" href="/src/assets/favicon/likelion.svg" /> -->
+    <link rel="preload" as="font" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" />
+    <link rel="stylesheet" href="./styles/avatars.css" />
+  </head>
+  <body>
+    <!-- 여기에 마크업을 구성해 주세요. -->
+    <div class="container">
+      <ul>
+        <li>
+          <addr title="Offline"><span class="status offline" aria-label="offline">오프라인</span></addr>
+          <addr title="Online"><span class="status online hidden" aria-label="online">온라인</span></addr>
+          <img id="profile1" class="profile" src="./images/face1.jpg" alt="수진" />
+        </li>
+        <li>
+          <addr title="Offline"><span class="status offline" aria-label="offline">오프라인</span></addr>
+          <addr title="Online"><span class="status online hidden" aria-label="online">온라인</span></addr>
+          <img id="profie2" class="profile" src="./images/face2.jpg" alt="예린" />
+        </li>
+        <li>
+          <addr title="Offline"><span class="status offline" aria-label="offline">오프라인</span></addr>
+          <addr title="Online"><span class="status online hidden" aria-label="online">온라인</span></addr>
+          <img id="profile3" class="profile" src="./images/face3.jpg" alt="하늘" />
+        </li>
+        <li>
+          <addr title="Offline"><span class="status offline" aria-label="offline">오프라인</span></addr>
+          <addr title="Online"><span class="status online hidden" aria-label="online">온라인</span></addr>
+          <img id="profile4" class="profile" src="./images/face4.jpg" alt="다영" />
+        </li>
+        <li>
+          <addr title="Offline"><span class="status offline" aria-label="offline">오프라인</span></addr>
+          <addr title="Online"><span class="status online hidden" aria-label="online">온라인</span></addr>
+          <img id="profile5" class="profile" src="./images/face5.jpg" alt="진우" />
+        </li>
+        <li>
+          <addr title="Offline"><span class="status offline" aria-label="offline">오프라인</span></addr>
+          <addr title="Online"><span class="status online hidden" aria-label="online">온라인</span></addr>
+          <img id="profile6" class="profile" src="./images/face6.jpg" alt="민혁" />
+        </li>
+        <li>
+          <addr title="Offline"><span class="status offline" aria-label="offline">오프라인</span></addr>
+          <addr title="Online"><span class="status online hidden" aria-label="online">온라인</span></addr>
+          <img id="profile7" class="profile" src="./images/face7.jpg" alt="태호" />
+        </li>
+        <li>
+          <addr title="Offline"><span class="status offline" aria-label="offline">오프라인</span></addr>
+          <addr title="Online"><span class="status online hidden" aria-label="online">온라인</span></addr>
+          <img id="profile8" class="profile" src="./images/face8.jpg" alt="유빈" />
+        </li>
+      </ul>
+    </div>
+    <button class="explainBtn" type="button" popovertarget="popoverContent">설명</button>
+    <div popover id="popoverContent" class="explainContent">
+      <p>
+        1. 프로필을 누르면 On/Offline 변경됩니다. <br />
+        2. 프로필에 alt는 각각 프로필 사용자의 이름이 담겨 있으며, 스크린 리더는 이를 읽어줍니다. <br />
+        3. 상태 표시 원에 마우스를 가져가면, online/offline이 표시가 됩니다.
+
+      </p>
+    </div>
+    <script>
+      const statusOns = document.querySelectorAll('.online');
+      const statusOffs = document.querySelectorAll('.offline');
+      const profiles = document.querySelectorAll('.profile');
+
+      profiles.forEach((profile, index) => {
+        profile.addEventListener('click', function () {
+          console.log(profile, index);
+          if (statusOns[index].classList.contains('hidden')) {
+            statusOns[index].classList.remove('hidden');
+            statusOffs[index].classList.add('hidden');
+            console.log('change online');
+          } else if (statusOffs[index].classList.contains('hidden')) {
+            statusOffs[index].classList.remove('hidden');
+            statusOns[index].classList.add('hidden');
+            console.log('change offline');
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

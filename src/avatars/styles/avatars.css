@@ -1,1 +1,97 @@
-/* 여기에 스타일을 구현해 주세요 */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 어우 눈이 너무 부셔~~ */
+  /* background-color: black; */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgb(28, 146, 173);
+  border-radius: 30px;
+  background-color: #ffffff;
+  box-shadow: 0.2em 0.4em 0.5em -0.2em gray;
+}
+ul {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 420px;
+  height: 225px;
+  /* border: 1px solid black; */
+  font-size: 0px;
+}
+li {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  position: relative;
+}
+img {
+  display: block;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  padding: 20px;
+  box-shadow: 0em 0.3em 0.3em 0.5em gray;
+  cursor: pointer;
+}
+/* img:hover {
+  .test {
+    width: 20px;
+    height: 20px;
+  }
+} */
+.status {
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid white;
+  position: absolute;
+  transform: translate(66px, 66px);
+  box-shadow: 0em 0.3em 0.3em 0.3em gray;
+}
+.online {
+  background-color: #03cc5c;
+}
+.offline {
+  background-color: #bcc3c7;
+}
+.hidden {
+  display: none;
+}
+
+/* popover */
+
+.explainContent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+}
+
+.closeBtn {
+  display: block;
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
