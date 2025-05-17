@@ -1,0 +1,230 @@
+@import './card-component.css';
+
+/* 헤드 */
+header {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  position: fixed;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  --globalnav-backdrop-filter: saturate(180%) blur(20px);
+  nav {
+    display: contents;
+    ul {
+      width: 1024px;
+      height: 100%;
+
+      display: inline-flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 22px;
+      font-size: var(--xx-small-text);
+      font-weight: 400;
+
+      .logo {
+        margin-top: 3px;
+      }
+
+      li {
+        &:nth-child(n) {
+          padding-inline: 8px;
+        }
+      }
+      #more {
+        display: none;
+      }
+    }
+  }
+
+  /* 네비게이션 미디어 */
+  @media (width < 835px) {
+    ul {
+      li#more {
+        display: inline-block;
+      }
+
+      li:nth-child(n + 2):nth-child(-n + 12) {
+        position: absolute;
+        opacity: 0;
+        display: none;
+      }
+
+      li:nth-child(1) {
+        flex-grow: 1;
+      }
+    }
+  }
+}
+
+/* 카드 레이아웃 */
+main {
+  /* Small Screen */
+  .component {
+    margin-block: 44px 20px;
+
+    /* 아이패드 프로 */
+    &.ipad-pro {
+      /* 글자 색 */
+      .content,
+      .title {
+        color: var(--white-font);
+      }
+
+      /* 배경 변경 */
+      span {
+        background-image: image-set(url(/src/apple/products/webp/ipad_pro.webp) 1x, url(/src/apple/products/webp/ipad_pro_2x.webp) 2x);
+        /* background: red; */
+      }
+    }
+
+    /* 아이패드 에어 */
+    &.ipad-air {
+      /* 글자 색 */
+      .content,
+      .title {
+        color: var(--black-font);
+      }
+
+      /* 배경 변경 */
+      span {
+        background-image: image-set(url(/src/apple/products/webp/ipad_air.webp) 1x, url(/src/apple/products/webp/ipad_air_2x.webp) 2x);
+        /* background: green; */
+      }
+    }
+
+    /* 아이폰 프로 */
+    &.iphone-pro {
+      /* 글자 색 */
+      .content,
+      .title {
+        color: var(--white-font);
+      }
+
+      /* 배경 변경 */
+      span {
+        background-image: image-set(url(/src/apple/products/webp/iphone15_pro.webp) 1x, url(/src/apple/products/webp/iphone15_pro_2x.webp) 2x);
+      }
+    }
+
+    /* 아이폰 */
+    &.iphone {
+      /* 글자 색 */
+      .content,
+      .title {
+        color: var(--black-font);
+      }
+      /* 배경 변경 */
+      span {
+        background-image: image-set(url(/src/apple/products/webp/iphone15.webp) 1x, url(/src/apple/products/webp/iphone15_2x.webp) 2x);
+      }
+    }
+
+    /* 애플워치 */
+    &.watch {
+      /* 글자 색 */
+      .content,
+      .title {
+        color: var(--white-font);
+      }
+      /* 배경 변경 */
+      span {
+        background-image: image-set(url(/src/apple/products/webp/apple_watch.webp) 1x, url(/src/apple/products/webp/apple_watch_2x.webp) 2x);
+      }
+    }
+
+    /* 맥북 에어 */
+    &.macbook-air {
+      /* 글자 색 */
+      .content,
+      .title {
+        color: var(--black-font);
+      }
+      /* 배경 변경 */
+      span {
+        background-image: image-set(url(/src/apple/products/webp/macbook_air.webp) 1x, url(/src/apple/products/webp/macbook_air_2x.webp) 2x);
+      }
+    }
+
+    /* 에어팟 pro*/
+    &.airpods-pro {
+      /* 글자 색 */
+      .content,
+      .title {
+        color: var(--white-font);
+      }
+      /* 배경 변경 */
+      span {
+        background-image: image-set(url(/src/apple/products/webp/airpods_pro.webp) 1x, url(/src/apple/products/webp/airpods_pro_2x.webp) 2x);
+      }
+    }
+  }
+}
+
+/* Large Screen */
+@media (width > 1024px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    .component {
+      margin-block: 44px 0px;
+
+      &.ipad-pro {
+        grid-column: 1/3;
+
+        /* 배경 변경 */
+        span {
+          background-image: image-set(url(./src/apple/products/webp/ipad_pro_wide.webp) 1x, url(/src/apple/products/webp/ipad_pro_wide_2x.webp) 2x);
+          /* background: red; */
+        }
+      }
+
+      &.ipad-air {
+        grid-column: 1/3;
+
+        /* 배경 변경 */
+        span {
+          background-image: image-set(url(./src/apple/products/webp/ipad_air_wide.webp) 1x, url(/src/apple/products/webp/ipad_air_wide_2x.webp) 2x);
+          /* background: red; */
+        }
+      }
+
+      &.iphone-pro {
+        grid-column: 1/3;
+
+        /* 배경 변경 */
+        span {
+          background-image: image-set(url(./src/apple/products/webp/iphone15_pro_wide.webp) 1x, url(/src/apple/products/webp/iphone15_pro_wide_2x.webp) 2x);
+          /* background: red; */
+        }
+      }
+    }
+  }
+}
+
+/* footer */
+footer {
+  display: flex;
+  flex-flow: column wrap;
+  background: rgb(245, 245, 247);
+  align-items: center;
+  margin-top:20px;
+  padding:20px;
+  p {
+    text-align: start;
+    width: 980px;
+    padding-bottom: 20px;
+  }
+
+  a {
+    color: rgb(63, 63, 63);
+    text-decoration-line: underline;
+    font-size: 12px;
+  }
+}

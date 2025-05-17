@@ -1,0 +1,126 @@
+@import './reset.css';
+@import './theme.css';
+@import './base.css';
+
+/* 컴포넌트 */
+body {
+  /* padding: 10px; */
+  width: 100vw;
+  max-height: 100vh;
+  box-sizing: border-box;
+  margin:0px;
+  padding:0px;
+  overflow-x: hidden;
+}
+
+/* 모바일 */
+.component {
+  --black-font: var(--black-300);
+  --white-font: var(--white);
+
+  /* background: rgba(255, 255, 0, 0.169); */
+  max-width: 100%;
+  /* height: 100%; */
+  height: 500px;
+  position: relative;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+
+  /* 배경 */
+  .background {
+    position: absolute;
+    width: 100%;
+    min-height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    z-index: -1;
+  }
+
+  .title {
+    --title-text: var(--large-text);
+    font-weight: bold;
+    font-size: var(--title-text);
+    margin-block: var(--large-spacing) var(--small-spacing);
+  }
+
+  .content {
+    --text-size: var(--base-text);
+    font-size: var(--text-size);
+  }
+
+  .release-date {
+    color: var(--gray);
+    font-size: var(--small-text);
+    margin-block-start: var(--small-spacing);
+  }
+
+  .link-bt {
+    --blue-tema: var(--blue-300);
+    --black-tema: var(--black-300);
+    --blue-tema-hover: var(--blue-200);
+    --black-tema-hover: var(--black-200);
+    --white-font:var(--white);
+
+    font-size: var(--xx-small-text);
+    text-align: center;
+    margin-block-start: var(--small-spacing);
+    a:nth-of-type(1) {
+      display: inline-block;
+      width: 90px;
+      height: 36px;
+      align-content: center;
+      border-radius: 36px;
+      margin-right: 8px;
+
+      /* 블루테마 */
+      &.blue-tema-more {
+        background: var(--blue-tema);
+        color:var(--white-font);
+        &:hover {
+          background-color: var(--blue-tema-hover);
+        }
+      }
+
+      /* 다크테마 */
+      &.black-tema-more {
+        background: var(--black-tema);
+         color:var(--white-font);
+        &:hover {
+          background-color: var(--black-tema-hover);
+        }
+      }
+    }
+    a:nth-of-type(2) {
+      display: inline-block;
+      width: 76px;
+      height: 36px;
+      border-radius: 36px;
+      align-content: center;
+      margin-left: 8px;
+
+      /* 블루테마 */
+      &.blue-tema-buy {
+        border: 1px solid var(--blue-tema);
+        color: var(--blue-tema);
+        &:hover {
+          background-color: var(--blue-tema);
+          color: var(--white);
+        }
+      }
+
+      /* 다크테마 */
+      &.black-tema-buy {
+        border: 1px solid var(--black-tema);
+        color: var(--black-tema);
+        &:hover {
+          background-color: var(--black-tema);
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
