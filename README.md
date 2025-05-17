@@ -10,4 +10,5 @@
 - [2주차 회고](./src/md/week2-retrospect.md)
 - [3주차 과제 : NAVER Login page](./src/login/login.html)
 - [3주차 회고](./src/md/week3-retrospect.md)
+- [3주차 과제 : apple](./src/apple/apple.html)
 - [4주차 회고](./src/md/week4-retrospect.md)

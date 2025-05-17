@@ -77,7 +77,7 @@ main {
 
       /* 배경 변경 */
       span {
-        background-image: image-set(url(/src/apple/products/webp/ipad_pro.webp) 1x, url(/src/apple/products/webp/ipad_pro_2x.webp) 2x);
+        background-image: image-set(url(../products/webp/ipad_pro.webp) 1x, url(../products/ipad_pro_2x.jpeg) 2x);
         /* background: red; */
       }
     }
@@ -92,7 +92,7 @@ main {
 
       /* 배경 변경 */
       span {
-        background-image: image-set(url(/src/apple/products/webp/ipad_air.webp) 1x, url(/src/apple/products/webp/ipad_air_2x.webp) 2x);
+        background-image: image-set(url(../products/webp/ipad_air.webp) 1x, url(../products/webp/ipad_air_2x.webp) 2x);
         /* background: green; */
       }
     }
@@ -107,7 +107,7 @@ main {
 
       /* 배경 변경 */
       span {
-        background-image: image-set(url(/src/apple/products/webp/iphone15_pro.webp) 1x, url(/src/apple/products/webp/iphone15_pro_2x.webp) 2x);
+        background-image: image-set(url(../products/webp/iphone15.webp) 1x, url(../products/webp/iphone15_pro_2x.webp) 2x);
       }
     }
 
@@ -120,7 +120,7 @@ main {
       }
       /* 배경 변경 */
       span {
-        background-image: image-set(url(/src/apple/products/webp/iphone15.webp) 1x, url(/src/apple/products/webp/iphone15_2x.webp) 2x);
+        background-image: image-set(url(../products/webp/iphone15.webp) 1x, url(../products/webp/iphone15_2x.webp) 2x);
       }
     }
 
@@ -133,7 +133,7 @@ main {
       }
       /* 배경 변경 */
       span {
-        background-image: image-set(url(/src/apple/products/webp/apple_watch.webp) 1x, url(/src/apple/products/webp/apple_watch_2x.webp) 2x);
+        background-image: image-set(url(../products/webp/apple_watch.webp) 1x, url(../products/webp/apple_watch_2x.webp) 2x);
       }
     }
 
@@ -146,7 +146,7 @@ main {
       }
       /* 배경 변경 */
       span {
-        background-image: image-set(url(/src/apple/products/webp/macbook_air.webp) 1x, url(/src/apple/products/webp/macbook_air_2x.webp) 2x);
+        background-image: image-set(url(../products/webp/macbook_air.webp) 1x, url(../products/webp/macbook_air_2x.webp) 2x);
       }
     }
 
@@ -159,7 +159,7 @@ main {
       }
       /* 배경 변경 */
       span {
-        background-image: image-set(url(/src/apple/products/webp/airpods_pro.webp) 1x, url(/src/apple/products/webp/airpods_pro_2x.webp) 2x);
+        background-image: image-set(url(../products/webp/airpods_pro.webp) 1x, url(../products/webp/airpods_pro_2x.webp) 2x);
       }
     }
   }
@@ -180,7 +180,7 @@ main {
 
         /* 배경 변경 */
         span {
-          background-image: image-set(url(./src/apple/products/webp/ipad_pro_wide.webp) 1x, url(/src/apple/products/webp/ipad_pro_wide_2x.webp) 2x);
+          background-image: image-set(url(../products/webp/ipad_pro_wide.webp) 1x, url(../products/webp/ipad_pro_wide_2x.webp) 2x);
           /* background: red; */
         }
       }
@@ -190,7 +190,7 @@ main {
 
         /* 배경 변경 */
         span {
-          background-image: image-set(url(./src/apple/products/webp/ipad_air_wide.webp) 1x, url(/src/apple/products/webp/ipad_air_wide_2x.webp) 2x);
+          background-image: image-set(url(../products/webp/ipad_air_wide.webp) 1x, url(../products/webp/ipad_air_wide_2x.webp) 2x);
           /* background: red; */
         }
       }
@@ -200,7 +200,7 @@ main {
 
         /* 배경 변경 */
         span {
-          background-image: image-set(url(./src/apple/products/webp/iphone15_pro_wide.webp) 1x, url(/src/apple/products/webp/iphone15_pro_wide_2x.webp) 2x);
+          background-image: image-set(url(../products/webp/iphone15_pro_wide.webp) 1x, url(../products/webp/iphone15_pro_wide_2x.webp) 2x);
           /* background: red; */
         }
       }
